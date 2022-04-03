@@ -12,11 +12,11 @@ def url_markup(videoid, duration, user_id, query, query_type):
                 callback_data=f"slider B|{query_type}|{query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="Music",
+                text="🎵",
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="Videos",
+                text="🎥",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
@@ -77,21 +77,21 @@ def search_markup(
     buttons = [
         [
             InlineKeyboardButton(
-                text="💎1💎", callback_data=f"Yukki {ID1}|{duration1}|{user_id}"
+                text="1️⃣", callback_data=f"Yukki {ID1}|{duration1}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="💎2️💎", callback_data=f"Yukki {ID2}|{duration2}|{user_id}"
+                text="2️⃣", callback_data=f"Yukki {ID2}|{duration2}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="💎3️💎", callback_data=f"Yukki {ID3}|{duration3}|{user_id}"
+                text="3️⃣", callback_data=f"Yukki {ID3}|{duration3}|{user_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="💎4️💎", callback_data=f"Yukki {ID4}|{duration4}|{user_id}"
+                text="4️⃣", callback_data=f"Yukki {ID4}|{duration4}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="💎5️💎", callback_data=f"Yukki {ID5}|{duration5}|{user_id}"
+                text="5️⃣", callback_data=f"Yukki {ID5}|{duration5}|{user_id}"
             ),
         ],
         [
@@ -126,25 +126,25 @@ def search_markup2(
     buttons = [
         [
             InlineKeyboardButton(
-                text="💎6️💎",
+                text="6️⃣",
                 callback_data=f"Yukki {ID6}|{duration6}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="💎7️💎",
+                text="7️⃣",
                 callback_data=f"Yukki {ID7}|{duration7}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="💎8️💎",
+                text="8️⃣",
                 callback_data=f"Yukki {ID8}|{duration8}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="💎9️💎",
+                text="9️⃣",
                 callback_data=f"Yukki {ID9}|{duration9}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="💎🔟💎",
+                text="🔟",
                 callback_data=f"Yukki {ID10}|{duration10}|{user_id}",
             ),
         ],
@@ -166,8 +166,14 @@ def search_markup2(
 def secondary_markup(videoid, user_id):
     buttons = [
         [
+            InlineKeyboardButton(text="▶️", callback_data=f"resumecb"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"pausecb"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"skipcb"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
+        ],
+        [
             InlineKeyboardButton(
-                text="Projects", url=f"https://RendyProjects",
+                text="🔗 More Menu", callback_data=f"other {videoid}|{user_id}"
             ),
             InlineKeyboardButton(text="🗑 Close Menu", callback_data=f"close"),
         ],
@@ -178,8 +184,12 @@ def secondary_markup(videoid, user_id):
 def secondary_markup2(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="Projects", url=f"https://RendyProjects",
-            ), 
+            InlineKeyboardButton(text="▶️", callback_data=f"resumecb"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"pausecb"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"skipcb"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
+        ],
+        [
             InlineKeyboardButton(text="🗑 Close Menu", callback_data=f"close"),
         ],
     ]
@@ -198,8 +208,10 @@ def primary_markup(videoid, user_id, current_time, total_time):
             )
         ],
         [
-            InlineKeyboardButton(text="Projects", url=f"https://RendyProjects",
-            ),
+            InlineKeyboardButton(text="▶️", callback_data=f"resumecb"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"pausecb"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"skipcb"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
         ],
         [
             InlineKeyboardButton(
@@ -220,8 +232,10 @@ def timer_markup(videoid, user_id, current_time, total_time):
             )
         ],
         [
-            InlineKeyboardButton(text="Projects", url=f"https://RendyProjects",
-            ),
+            InlineKeyboardButton(text="▶️", callback_data=f"resumecb"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"pausecb"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"skipcb"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
         ],
         [
             InlineKeyboardButton(
@@ -245,8 +259,10 @@ def audio_markup(videoid, user_id, current_time, total_time):
             )
         ],
         [
-            InlineKeyboardButton(text="Projects", url=f"https://RendyProjects",
-            ),
+            InlineKeyboardButton(text="▶️", callback_data=f"resumecb"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"pausecb"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"skipcb"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
         ],
         [InlineKeyboardButton(text="🗑 Close Menu", callback_data=f"close")],
     ]
@@ -262,8 +278,10 @@ def audio_timer_markup_start(videoid, user_id, current_time, total_time):
             )
         ],
         [
-            InlineKeyboardButton(text="Projects", url=f"https://RendyProjects",
-            ),
+            InlineKeyboardButton(text="▶️", callback_data=f"resumecb"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"pausecb"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"skipcb"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
         ],
         [InlineKeyboardButton(text="🗑 Close Menu", callback_data=f"close")],
     ]
@@ -273,8 +291,10 @@ def audio_timer_markup_start(videoid, user_id, current_time, total_time):
 audio_markup2 = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Projects", url=f"https://RendyProjects",
-            ),
+            InlineKeyboardButton(text="▶️", callback_data=f"resumecb"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"pausecb"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"skipcb"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"stopcb"),
         ],
         [InlineKeyboardButton("🗑 Close Menu", callback_data="close")],
     ]
