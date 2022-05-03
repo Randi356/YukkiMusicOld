@@ -6,17 +6,17 @@ def choose_markup(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🎵 Play Music",
+                text="𝐏𝐥𝐚𝐲 𝐌𝐮𝐬𝐢𝐜",
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🎥 Play Video",
+                text="𝐏𝐥𝐚𝐲 𝐕𝐢𝐝𝐞𝐨",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🗑 Close Search",
+                text="𝐂𝐥𝐨𝐬𝐞",
                 callback_data=f"forceclose {videoid}|{user_id}",
             )
         ],
@@ -28,11 +28,11 @@ def livestream_markup(quality, videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🎥  Start Live",
+                text="🎥 𝐒𝐭𝐚𝐫𝐭 𝐋𝐢𝐯𝐞",
                 callback_data=f"LiveStream {quality}|{videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🗑 Close",
+                text="𝐂𝐥𝐨𝐬𝐞",
                 callback_data=f"forceclose {videoid}|{user_id}",
             ),
         ],
@@ -44,27 +44,23 @@ def stream_quality_markup(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="📽 360P",
+                text="📽 360𝐩",
                 callback_data=f"VideoStream 360|{videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="📽 720P",
+                text="📽 720𝐩",
                 callback_data=f"VideoStream 720|{videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="📽 480P",
+                text="📽 480𝐩",
                 callback_data=f"VideoStream 480|{videoid}|{duration}|{user_id}",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="⬅️ Go Back",
-                callback_data=f"gback_list_chose_stream {videoid}|{duration}|{user_id}",
-            ),
-            InlineKeyboardButton(
-                text="🗑 Close Search",
+                text="𝐂𝐥𝐨𝐬𝐞",
                 callback_data=f"forceclose {videoid}|{user_id}",
-            ),
+            )
         ],
     ]
     return buttons
