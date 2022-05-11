@@ -1,5 +1,5 @@
-FROM hackinguserbot/rendymusic:latest
-RUN apt-get update \
+FROM rendyprojects/music:python3.10-nodejs18
+RUN apt-get update -y && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends ffmpeg \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
