@@ -2,6 +2,18 @@ This is a Old Yukki Music source code, Check out the new version here: https://g
 
 Credit for @TeamYukki as the owner & creator of this Repository.
 
+# <p align="left">💠 Deploy YukkiMusicOld</p>
+
+
+
+Klik tombol dibawah untuk deploy YukkiMusicOld
+
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Randi356/YukkiMusicOld"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-blue?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+
+<br>
+
+</p>
+
 # DEPLOY VPS ON YUKKI OLD
 
 - azure
@@ -25,3 +37,9 @@ Press Ctrl + C  once you are done with editing vars and type :wq to save .env or
 Finally Run Yukki Music Bot
 
 bash start
+```
+
+# Contribution
+• [Rendy](https://github.com/Randi356) coding
+
+• [TeamYukki](https://github.com/TeamYukki) dev
